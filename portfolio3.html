@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADJI KOMENAN Ivan Florian | Développeur d'Applications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root {
+            --github-dark: #0d1117;
+            --github-dark-secondary: #161b22;
+            --github-accent: #58a6ff;
+            --github-text: #c9d1d9;
+            --github-text-secondary: #8b949e;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--github-dark);
+            color: var(--github-text);
+        }
+        
+        .github-nav {
+            background-color: var(--github-dark-secondary);
+            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .nav-link {
+            position: relative;
+            color: var(--github-text-secondary);
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--github-text);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--github-accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--github-dark) 0%, var(--github-dark-secondary) 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #30363d;
+            background-color: var(--github-dark-secondary);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--github-accent);
+        }
+        
+        .skill-card {
+            border-left: 3px solid var(--github-accent);
+        }
+        
+        .btn-primary {
+            background-color: var(--github-accent);
+            color: white;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #388bfd;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            border: 1px solid var(--github-text-secondary);
+            transition: all 0.2s ease;
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--github-text);
+            transform: translateY(-2px);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(88, 166, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(88, 166, 255, 0); }
+        }
+        
+        .tab-active {
+            border-bottom: 3px solid var(--github-accent);
+            color: var(--github-text);
+            font-weight: 600;
+        }
+        
+        .stats-card {
+            transition: all 0.3s ease;
+            background-color: var(--github-dark-secondary);
+            border: 1px solid #30363d;
+        }
+        
+        .stats-card:hover {
+            transform: scale(1.05);
+            border-color: var(--github-accent);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--github-accent);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            width: 1px;
+            height: calc(100% - 15px);
+            background-color: var(--github-text-secondary);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .project-card {
+            border-top: 3px solid var(--github-accent);
+        }
+        
+        .github-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1;
+            color: white;
+            background-color: var(--github-accent);
+            border-radius: 2em;
+        }
+        
+        .github-badge-secondary {
+            background-color: #6e7681;
+        }
+        
+        .github-badge-success {
+            background-color: #238636;
+        }
+        
+        .github-badge-warning {
+            background-color: #9e6a03;
+        }
+        
+        .github-badge-danger {
+            background-color: #da3633;
+        }
+        
+        .github-badge-purple {
+            background-color: #8957e5;
+        }
+        
+        .wave-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-bg::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23161b22"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23161b22"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,233.58-94.45V0Z" fill="%23161b22"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .select-custom {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%238b949e' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .contributions-grid {
+            display: grid;
+            grid-template-columns: repeat(53, 15px);
+            grid-gap: 4px;
+            margin-top: 10px;
+        }
+        
+        .contribution-cell {
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+        }
+        
+        .contribution-cell[data-level="1"] {
+            background-color: #0e4429;
+        }
+        
+        .contribution-cell[data-level="2"] {
+            background-color: #006d32;
+        }
+        
+        .contribution-cell[data-level="3"] {
+            background-color: #26a641;
+        }
+        
+        .contribution-cell[data-level="4"] {
+            background-color: #39d353;
+        }
+        
+        .language-bar {
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #30363d;
+        }
+        
+        .language-bar-fill {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="github-nav text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-code text-2xl mr-2 text-accent"></i>
+                        <span class="font-bold text-xl">ADJI<span class="text-[#58a6ff]">KOMENAN</span></span>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-6 ml-10">
+                        <a href="#accueil" class="nav-link">Accueil</a>
+                        <a href="#apropos" class="nav-link">À Propos</a>
+                        <a href="#competences" class="nav-link">Compétences</a>
+                        <a href="#projets" class="nav-link">Projets</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="nav-link hidden md:block">
+                        <i class="fas fa-paper-plane mr-1"></i> Contact
+                    </a>
+                    <a href="#cv" class="bg-[#58a6ff] hover:bg-[#388bfd] text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">
+                        <i class="fas fa-download mr-1"></i> CV
+                    </a>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden mobile-menu-button focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden mobile-menu bg-[#161b22]">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#accueil" class="py-2 px-3 hover:bg-[#30363d] rounded-md">Accueil</a>
+                <a href="#apropos" class="py-2 px-3 hover:bg-[#30363d] rounded-md">À Propos</a>
+                <a href="#competences" class="py-2 px-3 hover:bg-[#30363d] rounded-md">Compétences</a>
+                <a href="#projets" class="py-2 px-3 hover:bg-[#30363d] rounded-md">Projets</a>
+                <a href="#contact" class="py-2 px-3 hover:bg-[#30363d] rounded-md">Contact</a>
+                <a href="#cv" class="bg-[#58a6ff] hover:bg-[#388bfd] text-white py-2 px-3 rounded-md text-center">
+                    <i class="fas fa-download mr-1"></i> Télécharger CV
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white wave-bg">
+        <div class="container mx-auto px-4 py-20">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">ADJI KOMENAN <span class="text-[#58a6ff]">Ivan Florian</span></h1>
+                    <h2 class="text-2xl md:text-3xl text-[#8b949e] mb-6">Développeur d'Applications</h2>
+                    <p class="text-xl text-[#8b949e] mb-8">Étudiant en BTS Informatique à ISATECH, passionné par le développement web et la création d'applications innovantes.</p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#projets" class="bg-[#58a6ff] hover:bg-[#388bfd] text-white py-3 px-6 rounded-md font-medium text-center transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-laptop-code mr-2"></i> Voir mes projets
+                        </a>
+                        <a href="#contact" class="border border-[#30363d] text-white hover:border-[#58a6ff] py-3 px-6 rounded-md font-medium flex items-center justify-center transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-envelope mr-2"></i> Me contacter
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center space-x-4">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-[#30363d]" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Collaborateur">
+                            <img class="w-10 h-10 rounded-full border-2 border-[#30363d]" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Collaborateur">
+                            <img class="w-10 h-10 rounded-full border-2 border-[#30363d]" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Collaborateur">
+                        </div>
+                        <div>
+                            <p class="text-[#8b949e]"><span class="font-bold text-white">20+</span> projets réalisés</p>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-[#8b949e] ml-2">4.7/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="C:\Users\LENOVO\Pictures\WhatsApp Image 2025-04-07 à 22.29.04_824cf1d2.jpg">
+                        <div class="absolute -bottom-5 -right-5 bg-[#0d1117] p-4 rounded-lg shadow-lg border border-[#30363d]" data-aos="fade-up" data-aos-delay="300">
+                            <div class="text-white">
+                                <p class="font-bold text-sm">Disponible pour</p>
+                                <p class="text-2xl font-bold">Nouveaux projets</p>
+                                <p class="text-xs text-[#8b949e]">Freelance & CDI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stats-card p-6 rounded-lg text-center" data-aos="fade-up">
+                    <div class="text-[#58a6ff] text-3xl mb-2">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2">3+</h3>
+                    <p class="text-[#8b949e]">Années d'expérience</p>
+                </div>
+                
+                <div class="stats-card p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-[#3fb950] text-3xl mb-2">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2">20+</h3>
+                    <p class="text-[#8b949e]">Projets réalisés</p>
+                </div>
+                
+                <div class="stats-card p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-[#d29922] text-3xl mb-2">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2">15+</h3>
+                    <p class="text-[#8b949e]">Clients satisfaits</p>
+                </div>
+                
+                <div class="stats-card p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-[#a371f7] text-3xl mb-2">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2">10+</h3>
+                    <p class="text-[#8b949e]">Technologies maîtrisées</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-white mb-6">À Propos de Moi</h2>
+                    <div class="w-20 h-1 bg-[#58a6ff] mb-6"></div>
+                    
+                    <p class="text-[#8b949e] mb-6">Je m'appelle ADJI KOMENAN Ivan Florian, étudiant en BTS Informatique - Développeur d'Applications à ISATECH. Passionné par les technologies numériques, je me spécialise dans le développement web et la création d'applications.</p>
+                    
+                    <p class="text-[#8b949e] mb-6">Depuis mon plus jeune âge, j'ai été captivé par l'univers du numérique, et cela m'a conduit à poursuivre une formation approfondie dans ce domaine.</p>
+                    
+                    <div class="bg-[#161b22] p-6 rounded-lg border border-[#30363d] mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-[#58a6ff] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Biographie</h4>
+                                <p class="text-[#8b949e] text-sm">Né le 26 mai 2004, j'ai grandi avec un fort intérêt pour l'informatique et la programmation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#cv" class="bg-[#58a6ff] hover:bg-[#388bfd] text-white py-3 px-6 rounded-md font-medium">
+                            <i class="fas fa-download mr-2"></i> Télécharger CV
+                        </a>
+                        <a href="#contact" class="border border-[#30363d] text-white hover:border-[#58a6ff] py-3 px-6 rounded-md font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i> Me contacter
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-[#161b22] p-8 rounded-xl border border-[#30363d]">
+                        <h3 class="text-xl font-bold text-white mb-6">Mon Parcours Académique</h3>
+                        
+                        <div class="timeline">
+                            <!-- Timeline Item 1 -->
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-white mb-1">BTS Informatique - Développeur d'Applications</h4>
+                                <p class="text-[#58a6ff] mb-2">ISATECH, Abidjan | 2023 - 2025</p>
+                                <p class="text-[#8b949e]">Formation approfondie en développement d'applications, bases de données et systèmes d'information.</p>
+                            </div>
+                            
+                            <!-- Timeline Item 2 -->
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-white mb-1">Baccalauréat Scientifique</h4>
+                                <p class="text-[#58a6ff] mb-2">Lycée Moderne HKB1, DAOUKRO | 2022 - 2023</p>
+                                <p class="text-[#8b949e]">Option Sciences de l'Ingénieur avec mention bien.</p>
+                            </div>
+                            
+                            <!-- Timeline Item 3 -->
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-white mb-1">Formation en Technologies Web</h4>
+                                <p class="text-[#58a6ff] mb-2">CEFTEC, Abidjan | 2017 - 2019</p>
+                                <p class="text-[#8b949e]">Initiation aux technologies web et à la programmation (HTML, CSS, JavaScript).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences" class="py-16 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-4">Mes Compétences</h2>
+                <div class="w-20 h-1 bg-[#58a6ff] mx-auto"></div>
+                <p class="text-[#8b949e] mt-4 max-w-2xl mx-auto">Technologies et outils que je maîtrise pour réaliser vos projets</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Frontend Skills -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d]" data-aos="fade-right">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-[#58a6ff] text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Développement Frontend</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- HTML -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">HTML</span>
+                                <span class="text-[#8b949e]">95%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#58a6ff]" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">CSS</span>
+                                <span class="text-[#8b949e]">90%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#58a6ff]" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- JavaScript -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">JavaScript</span>
+                                <span class="text-[#8b949e]">85%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#58a6ff]" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- React -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">React</span>
+                                <span class="text-[#8b949e]">80%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#58a6ff]" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d]" data-aos="fade-left">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-[#a371f7] text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Développement Backend</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- PHP -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">PHP</span>
+                                <span class="text-[#8b949e]">85%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#a371f7]" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Node.js -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">Node.js</span>
+                                <span class="text-[#8b949e]">75%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#a371f7]" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Python -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">Python</span>
+                                <span class="text-[#8b949e]">70%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#a371f7]" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Java -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-[#8b949e]">Java</span>
+                                <span class="text-[#8b949e]">65%</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-bar-fill bg-[#a371f7]" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Skill 1 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <p class="text-white text-center">HTML5</p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <p class="text-white text-center">CSS3</p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <p class="text-white text-center">JavaScript</p>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <p class="text-white text-center">React</p>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <p class="text-white text-center">PHP</p>
+                </div>
+                
+                <!-- Skill 6 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-laravel"></i>
+                    </div>
+                    <p class="text-white text-center">Laravel</p>
+                </div>
+                
+                <!-- Skill 7 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <p class="text-white text-center">Node.js</p>
+                </div>
+                
+                <!-- Skill 8 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <p class="text-white text-center">Python</p>
+                </div>
+                
+                <!-- Skill 9 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <p class="text-white text-center">Java</p>
+                </div>
+                
+                <!-- Skill 10 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <p class="text-white text-center">MySQL</p>
+                </div>
+                
+                <!-- Skill 11 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <p class="text-white text-center">Git</p>
+                </div>
+                
+                <!-- Skill 12 -->
+                <div class="skill-card p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="text-[#58a6ff] text-4xl mb-2 flex justify-center">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <p class="text-white text-center">GitHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projets" class="py-16 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-4">Mes Projets Récents</h2>
+                <div class="w-20 h-1 bg-[#58a6ff] mx-auto"></div>
+                <p class="text-[#8b949e] mt-4 max-w-2xl mx-auto">Découvrez une sélection de mes réalisations les plus significatives</p>
+            </div>
+            
+            <div class="flex justify-center mb-8" data-aos="fade-up">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg border border-[#30363d] bg-[#161b22] text-white hover:bg-[#30363d] focus:z-10 tab-active">
+                        Tous
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-[#30363d] bg-[#161b22] text-[#8b949e] hover:bg-[#30363d] focus:z-10">
+                        Web
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium border border-[#30363d] bg-[#161b22] text-[#8b949e] hover:bg-[#30363d] focus:z-10">
+                        Mobile
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-[#30363d] bg-[#161b22] text-[#8b949e] hover:bg-[#30363d] focus:z-10">
+                        Logiciels
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-lg border border-[#30363d] bg-[#161b22] text-[#8b949e] hover:bg-[#30363d] focus:z-10">
+                        Autres
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-[#161b22] rounded-xl shadow-md overflow-hidden card-hover project-card" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Site E-commerce" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 flex space-x-2">
+                            <span class="github-badge-success">React</span>
+                            <span class="github-badge">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Site E-commerce</h3>
+                        <p class="text-[#8b949e] mb-4">Plateforme de vente en ligne avec intégration de paiement sécurisé, gestion de stock et optimisation mobile.</p>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="github-badge-secondary"><i class="fas fa-code-branch mr-1"></i> 15</span>
+                                <span class="github-badge-warning"><i class="fas fa-star mr-1"></i> 8</span>
+                            </div>
+                            <a href="#" class="text-[#58a6ff] hover:underline">Voir le projet <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-[#161b22] rounded-xl shadow-md overflow-hidden card-hover project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Application de gestion" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 flex space-x-2">
+                            <span class="github-badge-purple">Flutter</span>
+                            <span class="github-badge">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Application de Gestion</h3>
+                        <p class="text-[#8b949e] mb-4">Application mobile Android/iOS pour la gestion de projets avec fonctionnalités de notifications et calendrier intégré.</p>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="github-badge-secondary"><i class="fas fa-code-branch mr-1"></i> 12</span>
+                                <span class="github-badge-warning"><i class="fas fa-star mr-1"></i> 5</span>
+                            </div>
+                            <a href="#" class="text-[#58a6ff] hover:underline">Voir le projet <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-[#161b22] rounded-xl shadow-md overflow-hidden card-hover project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="CMS personnalisé" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 flex space-x-2">
+                            <span class="github-badge-danger">Laravel</span>
+                            <span class="github-badge">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">CMS Personnalisé</h3>
+                        <p class="text-[#8b949e] mb-4">Système de gestion de contenu développé sur mesure pour une entreprise de communication.</p>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="github-badge-secondary"><i class="fas fa-code-branch mr-1"></i> 8</span>
+                                <span class="github-badge-warning"><i class="fas fa-star mr-1"></i> 3</span>
+                            </div>
+                            <a href="#" class="text-[#58a6ff] hover:underline">Voir le projet <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-[#161b22] hover:bg-[#30363d] text-white py-3 px-8 rounded-md font-medium border border-[#30363d] transition duration-300">
+                    <i class="fas fa-eye mr-2"></i> Voir tous mes projets
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Activity Section -->
+    <section class="py-16 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="bg-[#161b22] p-8 rounded-xl border border-[#30363d]">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8" data-aos="fade-right">
+                        <h2 class="text-2xl font-bold text-white mb-4">Mon Activité GitHub</h2>
+                        <p class="text-[#8b949e] mb-6">Je partage régulièrement mes projets et contributions sur GitHub. Voici un aperçu de mon activité récente.</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="GitHub Avatar" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold text-white">ADJIKOMENAN</h3>
+                                <p class="text-[#8b949e] text-sm">Abidjan, Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4 mb-6">
+                            <div>
+                                <span class="font-bold text-white">42</span>
+                                <span class="text-[#8b949e]">Répositories</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-white">128</span>
+                                <span class="text-[#8b949e]">Contributions</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-white">24</span>
+                                <span class="text-[#8b949e]">Followers</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="inline-block bg-[#30363d] hover:bg-[#58a6ff] text-white py-2 px-4 rounded-md text-sm font-medium">
+                            <i class="fab fa-github mr-2"></i> Voir mon profil GitHub
+                        </a>
+                    </div>
+                    
+                    <div class="lg:w-1/2" data-aos="fade-left">
+                        <h3 class="text-lg font-bold text-white mb-4">Contributions récentes</h3>
+                        <div class="contributions-grid">
+                            <!-- This would be dynamically generated from GitHub API in a real scenario -->
+                            <div class="contribution-cell" data-level="0"></div>
+                            <div class="contribution-cell" data-level="1"></div>
+                            <div class="contribution-cell" data-level="2"></div>
+                            <div class="contribution-cell" data-level="3"></div>
+                            <div class="contribution-cell" data-level="4"></div>
+                            <div class="contribution-cell" data-level="0"></div>
+                            <div class="contribution-cell" data-level="1"></div>
+                            <div class="contribution-cell" data-level="2"></div>
+                            <div class="contribution-cell" data-level="3"></div>
+                            <div class="contribution-cell" data-level="4"></div>
+                            <div class="contribution-cell" data-level="0"></div>
+                            <div class="contribution-cell" data-level="1"></div>
+                            <div class="contribution-cell" data-level="2"></div>
+                            <div class="contribution-cell" data-level="3"></div>
+                            <div class="contribution-cell" data-level="4"></div>
+                            <div class="contribution-cell" data-level="0"></div>
+                            <div class="contribution-cell" data-level="1"></div>
+                            <div class="contribution-cell" data-level="2"></div>
+                            <div class="contribution-cell" data-level="3"></div>
+                            <div class="contribution-cell" data-level="4"></div>
+                            <div class="contribution-cell" data-level="0"></div>
+                            <div class="contribution-cell" data-level="1"></div>
+                            <div class="contribution-cell" data-level="2"></div>
+                            <div class="contribution-cell" data-level="3"></div>
+                            <div class="contribution-cell" data-level="4"></div>
+                            <div class="contribution-cell" data-level="0"></div>
+                            <div class="contribution-cell" data-level="1"></div>
+                            <div class="contribution-cell" data-level="2"></div>
+                            <div class="contribution-cell" data-level="3"></div>
+                            <div class="contribution-cell" data-level="4"></div>
+                           
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-white mb-2">Derniers projets</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 bg-[#0d1117] rounded-md border border-[#30363d]">
+                                    <div>
+                                        <a href="#" class="text-[#58a6ff] hover:underline font-medium">ecommerce-platform</a>
+                                        <p class="text-[#8b949e] text-sm">Plateforme e-commerce avec React et Node.js</p>
+                                    </div>
+                                    <span class="github-badge-secondary">Public</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-[#0d1117] rounded-md border border-[#30363d]">
+                                    <div>
+                                        <a href="#" class="text-[#58a6ff] hover:underline font-medium">task-manager-app</a>
+                                        <p class="text-[#8b949e] text-sm">Application de gestion de tâches en Flutter</p>
+                                    </div>
+                                    <span class="github-badge-secondary">Public</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section id="cv" class="py-16 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="bg-[#161b22] p-8 rounded-xl border border-[#30363d] text-center" data-aos="zoom-in">
+                <h2 class="text-2xl font-bold text-white mb-4">Télécharger mon CV</h2>
+                <p class="text-[#8b949e] mb-8 max-w-2xl mx-auto">Vous pouvez télécharger une version PDF de mon curriculum vitae pour en savoir plus sur mon parcours, mes compétences et mes expériences professionnelles.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#" class="bg-[#58a6ff] hover:bg-[#388bfd] text-white py-3 px-8 rounded-md font-medium inline-flex items-center justify-center transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-download mr-2"></i> Télécharger CV (FR)
+                    </a>
+                    <a href="#" class="border border-[#30363d] text-white hover:border-[#58a6ff] py-3 px-8 rounded-md font-medium inline-flex items-center justify-center transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-download mr-2"></i> Download CV (EN)
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <div class="bg-[#0d1117] p-4 rounded-lg border border-[#30363d] flex items-center">
+                        <i class="fas fa-file-pdf text-[#58a6ff] text-2xl mr-3"></i>
+                        <div>
+                            <p class="text-white font-medium">CV_ADJIKOMENAN.pdf</p>
+                            <p class="text-[#8b949e] text-sm">2.4 MB</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#0d1117] p-4 rounded-lg border border-[#30363d] flex items-center">
+                        <i class="fas fa-file-pdf text-[#58a6ff] text-2xl mr-3"></i>
+                        <div>
+                            <p class="text-white font-medium">CV_ADJIKOMENAN_EN.pdf</p>
+                            <p class="text-[#8b949e] text-sm">2.3 MB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-[#0d1117]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-4">Contactez-moi</h2>
+                <div class="w-20 h-1 bg-[#58a6ff] mx-auto"></div>
+                <p class="text-[#8b949e] mt-4 max-w-2xl mx-auto">Disponible pour des opportunités de freelance ou CDI. N'hésitez pas à me contacter pour discuter de votre projet.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-white mb-6">Informations de contact</h3>
+                    
+                    <div class="bg-[#161b22] p-6 rounded-lg border border-[#30363d] mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[#58a6ff] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Email</h4>
+                                <p class="text-[#58a6ff]">adjikomenan@email.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-[#161b22] p-6 rounded-lg border border-[#30363d] mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[#3fb950] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Téléphone</h4>
+                                <p class="text-[#58a6ff]">+225 XX XX XX XX</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-[#161b22] p-6 rounded-lg border border-[#30363d]">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[#d29922] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Localisation</h4>
+                                <p class="text-[#8b949e]">Abidjan, Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-white mt-8 mb-4">Réseaux sociaux</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-[#161b22] hover:bg-[#30363d] text-white w-12 h-12 rounded-full flex items-center justify-center border border-[#30363d]">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-[#161b22] hover:bg-[#30363d] text-white w-12 h-12 rounded-full flex items-center justify-center border border-[#30363d]">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="bg-[#161b22] hover:bg-[#30363d] text-white w-12 h-12 rounded-full flex items-center justify-center border border-[#30363d]">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-[#161b22] hover:bg-[#30363d] text-white w-12 h-12 rounded-full flex items-center justify-center border border-[#30363d]">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-[#161b22] p-8 rounded-xl border border-[#30363d]">
+                        <h3 class="text-xl font-bold text-white mb-6">Envoyez-moi un message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-[#8b949e] text-sm font-medium mb-2">Nom complet *</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:ring-2 focus:ring-[#58a6ff] focus:border-[#58a6ff]" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-[#8b949e] text-sm font-medium mb-2">Email *</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:ring-2 focus:ring-[#58a6ff] focus:border-[#58a6ff]" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-[#8b949e] text-sm font-medium mb-2">Sujet *</label>
+                                <select id="subject" class="w-full px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:ring-2 focus:ring-[#58a6ff] focus:border-[#58a6ff] select-custom" required>
+                                    <option value="" disabled selected>Sélectionnez un sujet</option>
+                                    <option>Proposition d'emploi</option>
+                                    <option>Projet freelance</option>
+                                    <option>Demande d'information</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-[#8b949e] text-sm font-medium mb-2">Message *</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:ring-2 focus:ring-[#58a6ff] focus:border-[#58a6ff]" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-[#58a6ff] hover:bg-[#388bfd] text-white py-3 px-6 rounded-md font-medium transition duration-300">
+                                Envoyer le message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0d1117] text-[#8b949e] py-12 border-t border-[#30363d]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-2xl mr-2 text-[#58a6ff]"></i>
+                        <span class="font-bold text-xl text-white">ADJI<span class="text-[#58a6ff]">KOMENAN</span></span>
+                    </div>
+                    <p class="mb-4">Développeur d'Applications basé à Abidjan, spécialisé dans le développement web et mobile.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-[#8b949e] hover:text-[#58a6ff]">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-[#8b949e] hover:text-[#58a6ff]">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-[#8b949e] hover:text-[#58a6ff]">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-[#8b949e] hover:text-[#58a6ff]">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="hover:text-[#58a6ff]">Accueil</a></li>
+                        <li><a href="#apropos" class="hover:text-[#58a6ff]">À Propos</a></li>
+                        <li><a href="#competences" class="hover:text-[#58a6ff]">Compétences</a></li>
+                        <li><a href="#projets" class="hover:text-[#58a6ff]">Projets</a></li>
+                        <li><a href="#contact" class="hover:text-[#58a6ff]">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#58a6ff]">Développement Web</a></li>
+                        <li><a href="#" class="hover:text-[#58a6ff]">Applications Mobiles</a></li>
+                        <li><a href="#" class="hover:text-[#58a6ff]">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-[#58a6ff]">Sites E-commerce</a></li>
+                        <li><a href="#" class="hover:text-[#58a6ff]">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Newsletter</h3>
+                    <p class="mb-4">Abonnez-vous pour recevoir mes actualités et nouveaux projets.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="flex-1 px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-l-md text-white focus:outline-none focus:border-[#58a6ff]">
+                        <button type="submit" class="bg-[#58a6ff] hover:bg-[#388bfd] px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p class="text-xs mt-2">Je ne partagerai jamais votre email.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-[#30363d] pt-8 text-center">
+                <p>&copy; 2023 ADJI KOMENAN Ivan Florian. Tous droits réservés.</p>
+                <p class="text-xs mt-2">Conçu avec <i class="fas fa-heart text-[#58a6ff]"></i> et du code</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="fixed bottom-6 right-6 bg-[#58a6ff] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#388bfd] transition duration-300 z-50 hidden" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+        
+        // Back to top button visibility
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e){
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+            })
+            };
+</script>
+</body>
+</html>
