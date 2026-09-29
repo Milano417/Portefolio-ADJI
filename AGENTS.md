@@ -22,6 +22,10 @@ docker compose -f docker-compose.base44.yml up -d --build
 - No environment variables or secrets are required.
 - No migrations or seeds.
 
-## Notes
+## Content
 
-- The hero image uses a local Windows file path (`C:\Users\LENOVO\...`) that won't resolve in the container; it will show a broken image. This is a known issue in the source.
+The portfolio contains the real personal and professional information for ADJI KOMENAN Ivan Florian (alias MILANO):
+- Sections: Hero, About (philosophy + vision), Skills (dev + IA + creative), Projects (case studies), Experience & Education, Services (Milaweb), Contact.
+- Projects are presented as case studies (HotelFlow, MILANO AI) with problem → solution → tech → result.
+- Contact: adjikomenan@gmail.com, +225 05 54 18 66 19, +225 07 00 24 57 98, Abidjan.
+- No external image assets are used; all visuals are Font Awesome icons and CSS gradients to avoid broken images in the container.

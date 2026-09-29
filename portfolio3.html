@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADJI KOMENAN Ivan Florian | Développeur d'Applications</title>
+    <title>ADJI KOMENAN Ivan Florian — MILANO | Web & Mobile Developer · Digital Creator</title>
+    <meta name="description" content="ADJI KOMENAN Ivan Florian (MILANO) — Développeur Web & Mobile, Digital Creator et Graphic Designer basé en Côte d'Ivoire. Je transforme les idées en expériences numériques.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -39,16 +40,13 @@
             --muted: #8b949e;
             --text: #e6edf3;
         }
-
         * { -webkit-font-smoothing: antialiased; }
-
         body {
             font-family: 'Inter', system-ui, sans-serif;
             scroll-behavior: smooth;
             background-color: var(--bg);
             color: var(--text);
         }
-
         .bg-grid {
             background-image:
                 linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -59,7 +57,6 @@
             -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
             mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
         }
-
         .gradient-text {
             background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
             -webkit-background-clip: text;
@@ -67,14 +64,8 @@
             -webkit-text-fill-color: transparent;
             color: transparent;
         }
-
-        .glow-primary {
-            box-shadow: 0 0 24px rgba(59, 130, 246, 0.25);
-        }
-        .glow-primary:hover {
-            box-shadow: 0 0 32px rgba(59, 130, 246, 0.4);
-        }
-
+        .glow-primary { box-shadow: 0 0 24px rgba(59, 130, 246, 0.25); }
+        .glow-primary:hover { box-shadow: 0 0 32px rgba(59, 130, 246, 0.4); }
         .section-label {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.75rem;
@@ -82,7 +73,6 @@
             letter-spacing: 0.25em;
             color: var(--primary);
         }
-
         .glass-card {
             background: rgba(17, 21, 24, 0.6);
             backdrop-filter: blur(12px);
@@ -90,213 +80,81 @@
             border-radius: 1rem;
             transition: border-color 0.3s ease, transform 0.3s ease;
         }
-        .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-
+        .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); }
         .nav-blur {
             background: rgba(10, 11, 13, 0.7);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
         }
-        .nav-link {
-            position: relative;
-            color: var(--muted);
-            transition: color 0.2s ease;
-        }
+        .nav-link { position: relative; color: var(--muted); transition: color 0.2s ease; }
         .nav-link:hover { color: var(--text); }
         .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background: var(--primary);
-            transition: width 0.3s ease;
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0;
+            background: var(--primary); transition: width 0.3s ease;
         }
         .nav-link:hover::after { width: 100%; }
-
         .btn-pill-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-radius: 9999px;
-            background: var(--primary);
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px;
+            background: var(--primary); color: #fff; padding: 0.75rem 1.5rem;
+            font-size: 0.875rem; font-weight: 600; transition: all 0.2s ease;
         }
         .btn-pill-primary:hover { opacity: 0.9; transform: translateY(-1px); }
-
         .btn-pill-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-radius: 9999px;
-            border: 1px solid var(--border);
-            background: rgba(17, 21, 24, 0.5);
-            color: var(--text);
-            padding: 0.75rem 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 600;
+            display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px;
+            border: 1px solid var(--border); background: rgba(17, 21, 24, 0.5);
+            color: var(--text); padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 600;
             transition: all 0.2s ease;
         }
-        .btn-pill-secondary:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            color: var(--primary);
-        }
-
-        .skill-bar {
-            height: 6px;
-            border-radius: 9999px;
-            overflow: hidden;
-            background: var(--border);
-        }
+        .btn-pill-secondary:hover { border-color: rgba(59, 130, 246, 0.5); color: var(--primary); }
+        .skill-bar { height: 6px; border-radius: 9999px; overflow: hidden; background: var(--border); }
         .skill-bar-fill {
-            height: 100%;
-            border-radius: 9999px;
+            height: 100%; border-radius: 9999px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             transition: width 1s ease;
         }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 2rem;
-        }
+        .timeline-item { position: relative; padding-left: 2rem; margin-bottom: 2rem; }
         .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 6px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--primary);
-            box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+            content: ''; position: absolute; left: 0; top: 6px; width: 12px; height: 12px;
+            border-radius: 50%; background: var(--primary); box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
         }
         .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 18px;
-            width: 1px;
-            height: calc(100% - 12px);
-            background: var(--border);
+            content: ''; position: absolute; left: 5px; top: 18px; width: 1px;
+            height: calc(100% - 12px); background: var(--border);
         }
         .timeline-item:last-child::after { display: none; }
-
         .tech-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.375rem;
-            padding: 0.25rem 0.625rem;
-            font-size: 0.6875rem;
-            font-weight: 600;
-            border-radius: 9999px;
-            border: 1px solid var(--border);
-            background: rgba(59, 130, 246, 0.08);
-            color: var(--accent);
+            display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.25rem 0.625rem;
+            font-size: 0.6875rem; font-weight: 600; border-radius: 9999px;
+            border: 1px solid var(--border); background: rgba(59, 130, 246, 0.08); color: var(--accent);
         }
-
         .filter-tab {
-            padding: 0.5rem 1.25rem;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            border-radius: 9999px;
-            border: 1px solid var(--border);
-            background: rgba(17, 21, 24, 0.5);
-            color: var(--muted);
-            transition: all 0.2s ease;
-            cursor: pointer;
+            padding: 0.5rem 1.25rem; font-size: 0.8125rem; font-weight: 600; border-radius: 9999px;
+            border: 1px solid var(--border); background: rgba(17, 21, 24, 0.5);
+            color: var(--muted); transition: all 0.2s ease; cursor: pointer;
         }
         .filter-tab:hover { color: var(--text); border-color: rgba(59,130,246,0.3); }
-        .filter-tab.active {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
-        }
-
-        .contributions-grid {
-            display: grid;
-            grid-template-columns: repeat(53, 1fr);
-            gap: 3px;
-        }
-        .contribution-cell {
-            width: 100%;
-            aspect-ratio: 1;
-            border-radius: 2px;
-            background: var(--secondary);
-            border: 1px solid var(--border);
-        }
-        .contribution-cell[data-level="1"] { background: #0e4429; }
-        .contribution-cell[data-level="2"] { background: #006d32; }
-        .contribution-cell[data-level="3"] { background: #26a641; }
-        .contribution-cell[data-level="4"] { background: #39d353; }
-
+        .filter-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
         #loader {
-            position: fixed;
-            inset: 0;
-            z-index: 100;
-            display: grid;
-            place-items: center;
-            background: var(--bg);
-            transition: opacity 0.6s ease;
+            position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
+            background: var(--bg); transition: opacity 0.6s ease;
         }
         #loader.hidden { opacity: 0; pointer-events: none; }
-
-        .progress-track {
-            height: 4px;
-            width: 100%;
-            border-radius: 9999px;
-            background: var(--border);
-            overflow: hidden;
-        }
-        .progress-fill {
-            height: 100%;
-            border-radius: 9999px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
+        .progress-track { height: 4px; width: 100%; border-radius: 9999px; background: var(--border); overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 9999px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; transition: width 0.1s ease; }
+        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
         .floating { animation: floating 4s ease-in-out infinite; }
-
         #scroll-progress {
-            position: fixed;
-            top: 0; left: 0;
-            height: 2px;
-            width: 100%;
+            position: fixed; top: 0; left: 0; height: 2px; width: 100%;
             background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transform-origin: left;
-            z-index: 60;
+            transform: scaleX(0); transform-origin: left; z-index: 60;
         }
-
         .form-input {
-            width: 100%;
-            padding: 0.625rem 1rem;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 0.625rem;
-            color: var(--text);
-            font-size: 0.875rem;
-            transition: border-color 0.2s ease;
+            width: 100%; padding: 0.625rem 1rem; background: var(--bg);
+            border: 1px solid var(--border); border-radius: 0.625rem;
+            color: var(--text); font-size: 0.875rem; transition: border-color 0.2s ease;
         }
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-        }
+        .form-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); }
         .form-input::placeholder { color: var(--muted); }
-
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
@@ -315,9 +173,7 @@
                 </div>
             </div>
             <p class="font-mono text-xs uppercase tracking-[0.35em] text-primary/80 mb-8">Think. Design. Build. Evolve.</p>
-            <div class="progress-track">
-                <div class="progress-fill" id="progress-fill"></div>
-            </div>
+            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
             <div class="mt-3 flex items-center justify-between text-xs text-muted">
                 <span>Chargement du portfolio</span>
                 <span class="font-mono font-semibold text-primary tabular-nums" id="progress-text">0%</span>
@@ -333,24 +189,23 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-8">
-                    <div class="flex items-center gap-2">
+                    <a href="#accueil" class="flex items-center gap-2">
                         <i class="fas fa-code text-xl text-primary"></i>
-                        <span class="font-bold text-lg">ADJI<span class="text-primary">KOMENAN</span></span>
-                    </div>
+                        <span class="font-bold text-lg">MILANO<span class="text-primary">.</span>dev</span>
+                    </a>
                     <div class="hidden md:flex items-center gap-6">
                         <a href="#accueil" class="nav-link text-sm">Accueil</a>
                         <a href="#apropos" class="nav-link text-sm">À Propos</a>
                         <a href="#competences" class="nav-link text-sm">Compétences</a>
                         <a href="#projets" class="nav-link text-sm">Projets</a>
+                        <a href="#experience" class="nav-link text-sm">Parcours</a>
+                        <a href="#services" class="nav-link text-sm">Services</a>
                         <a href="#contact" class="nav-link text-sm">Contact</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="#contact" class="nav-link text-sm hidden md:flex items-center gap-1.5">
-                        <i class="fas fa-paper-plane text-xs"></i> Contact
-                    </a>
-                    <a href="#cv" class="btn-pill-primary text-xs px-4 py-2">
-                        <i class="fas fa-download"></i> CV
+                    <a href="#contact" class="btn-pill-primary text-xs px-4 py-2">
+                        <i class="fas fa-paper-plane"></i> Me contacter
                     </a>
                     <button class="md:hidden text-muted text-xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                         <i class="fas fa-bars"></i>
@@ -364,6 +219,8 @@
                 <a href="#apropos" class="py-2 px-3 rounded-lg hover:bg-border/50 text-sm">À Propos</a>
                 <a href="#competences" class="py-2 px-3 rounded-lg hover:bg-border/50 text-sm">Compétences</a>
                 <a href="#projets" class="py-2 px-3 rounded-lg hover:bg-border/50 text-sm">Projets</a>
+                <a href="#experience" class="py-2 px-3 rounded-lg hover:bg-border/50 text-sm">Parcours</a>
+                <a href="#services" class="py-2 px-3 rounded-lg hover:bg-border/50 text-sm">Services</a>
                 <a href="#contact" class="py-2 px-3 rounded-lg hover:bg-border/50 text-sm">Contact</a>
             </div>
         </div>
@@ -375,7 +232,7 @@
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-primary/10 blur-[120px]"></div>
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-7 order-2 lg:order-1" data-aos="fade-up">
+                <div class="lg:col-span-7" data-aos="fade-up">
                     <div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary">
                         <span class="relative flex h-2 w-2">
                             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60"></span>
@@ -383,16 +240,23 @@
                         </span>
                         Disponible pour de nouveaux projets
                     </div>
-                    <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight">
-                        ADJI KOMENAN <span class="gradient-text">Ivan Florian</span>
+                    <p class="mt-5 font-mono text-sm text-primary/80 tracking-wider">// Bonjour, je suis</p>
+                    <h1 class="mt-2 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight">
+                        ADJI KOMENAN<br><span class="gradient-text">Ivan Florian</span> <span class="text-3xl sm:text-4xl text-muted font-mono">aka MILANO</span>
                     </h1>
-                    <p class="mt-3 text-xl sm:text-2xl text-muted font-semibold">Développeur d'Applications</p>
+                    <p class="mt-4 text-xl sm:text-2xl font-semibold">
+                        <span class="text-white">Web & Mobile Developer</span>
+                        <span class="text-muted mx-2">•</span>
+                        <span class="text-accent">Digital Creator</span>
+                        <span class="text-muted mx-2">•</span>
+                        <span class="text-primary">Graphic Designer</span>
+                    </p>
                     <p class="mt-5 text-base sm:text-lg text-muted max-w-xl leading-relaxed">
-                        Étudiant en BTS Informatique à ISATECH, passionné par le développement web et la création d'applications innovantes.
+                        Je transforme les idées en expériences numériques. Du concept à la mise en production — sites web, applications mobiles, identité visuelle et solutions digitales.
                     </p>
                     <div class="mt-6 flex items-center gap-2 text-sm text-muted">
                         <i class="fas fa-map-marker-alt text-primary text-sm"></i>
-                        Basé en Côte d'Ivoire <span class="text-base">🇨🇮</span>
+                        Abidjan, Côte d'Ivoire <span class="text-base">🇨🇮</span>
                     </div>
                     <div class="mt-8 flex flex-wrap items-center gap-3">
                         <a href="#projets" class="btn-pill-primary glow-primary">
@@ -403,27 +267,16 @@
                             <i class="fas fa-envelope"></i> Me contacter
                         </a>
                     </div>
-                    <div class="mt-10 flex items-center gap-4">
-                        <div class="flex -space-x-2">
-                            <img class="w-10 h-10 rounded-full border-2 border-border" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Collaborateur">
-                            <img class="w-10 h-10 rounded-full border-2 border-border" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Collaborateur">
-                            <img class="w-10 h-10 rounded-full border-2 border-border" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Collaborateur">
-                        </div>
-                        <div>
-                            <p class="text-muted"><span class="font-bold text-white">20+</span> projets réalisés</p>
-                            <div class="flex text-yellow-400 text-sm mt-0.5">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                <span class="text-muted ml-2 text-xs">4.7/5</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="lg:col-span-5 order-1 lg:order-2 relative" data-aos="fade-left">
+                <div class="lg:col-span-5 relative" data-aos="fade-left">
                     <div class="relative mx-auto max-w-sm lg:max-w-none">
                         <div class="relative rounded-2xl border border-border/70 bg-secondary/40 p-2 backdrop-blur-sm">
                             <div class="absolute -inset-px rounded-2xl bg-gradient-to-b from-primary/30 to-transparent opacity-40 blur-sm"></div>
                             <div class="relative overflow-hidden rounded-xl aspect-[4/5] bg-gradient-to-br from-secondary to-background flex items-center justify-center">
-                                <i class="fas fa-user-circle text-8xl text-muted/30"></i>
+                                <div class="text-center">
+                                    <i class="fas fa-user-astronaut text-8xl text-primary/20"></i>
+                                    <p class="mt-4 font-mono text-sm text-muted/50">MILANO</p>
+                                </div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
                             </div>
                         </div>
@@ -432,26 +285,26 @@
                                 <i class="fas fa-code text-sm"></i>
                             </span>
                             <div class="leading-tight">
-                                <p class="text-xs font-semibold text-white">10+ Technologies</p>
-                                <p class="text-[10px] text-muted">Web · Mobile · SI</p>
+                                <p class="text-xs font-semibold text-white">Web · Mobile · SI</p>
+                                <p class="text-[10px] text-muted">Full-stack</p>
                             </div>
                         </div>
                         <div class="absolute hidden sm:flex items-center gap-2.5 rounded-xl border border-border bg-background/80 backdrop-blur-md px-3 py-2.5 shadow-xl right-[-4%] top-[8%] floating" style="animation-delay: 1s;">
                             <span class="grid h-8 w-8 place-items-center rounded-lg bg-primary/15 text-primary">
-                                <i class="fas fa-layer-group text-sm"></i>
+                                <i class="fas fa-palette text-sm"></i>
                             </span>
                             <div class="leading-tight">
-                                <p class="text-xs font-semibold text-white">Building digital solutions</p>
-                                <p class="text-[10px] text-muted">End-to-end</p>
+                                <p class="text-xs font-semibold text-white">Digital Creator</p>
+                                <p class="text-[10px] text-muted">Design · Content</p>
                             </div>
                         </div>
                         <div class="absolute hidden sm:flex items-center gap-2.5 rounded-xl border border-border bg-background/80 backdrop-blur-md px-3 py-2.5 shadow-xl right-[-2%] bottom-[14%] floating" style="animation-delay: 2s;">
                             <span class="grid h-8 w-8 place-items-center rounded-lg bg-primary/15 text-primary">
-                                <i class="fas fa-bolt text-sm"></i>
+                                <i class="fas fa-robot text-sm"></i>
                             </span>
                             <div class="leading-tight">
-                                <p class="text-xs font-semibold text-white">Available for projects</p>
-                                <p class="text-[10px] text-muted">Disponible</p>
+                                <p class="text-xs font-semibold text-white">AI Builder</p>
+                                <p class="text-[10px] text-muted">Gemini · Agents</p>
                             </div>
                         </div>
                     </div>
@@ -467,21 +320,21 @@
                 <div class="glass-card p-6 text-center" data-aos="fade-up">
                     <div class="text-primary text-3xl mb-2"><i class="fas fa-calendar-alt"></i></div>
                     <h3 class="text-3xl font-bold text-white mb-1">3+</h3>
-                    <p class="text-muted text-sm">Années d'expérience</p>
+                    <p class="text-muted text-sm">Ans d'expérience</p>
                 </div>
                 <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-green-400 text-3xl mb-2"><i class="fas fa-project-diagram"></i></div>
-                    <h3 class="text-3xl font-bold text-white mb-1">20+</h3>
-                    <p class="text-muted text-sm">Projets réalisés</p>
+                    <h3 class="text-3xl font-bold text-white mb-1">11+</h3>
+                    <p class="text-muted text-sm">Projets conçus</p>
                 </div>
                 <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-yellow-400 text-3xl mb-2"><i class="fas fa-users"></i></div>
-                    <h3 class="text-3xl font-bold text-white mb-1">15+</h3>
-                    <p class="text-muted text-sm">Clients satisfaits</p>
+                    <div class="text-yellow-400 text-3xl mb-2"><i class="fas fa-palette"></i></div>
+                    <h3 class="text-3xl font-bold text-white mb-1">3</h3>
+                    <p class="text-muted text-sm">Domaines : Dev · Design · IA</p>
                 </div>
                 <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-purple-400 text-3xl mb-2"><i class="fas fa-code-branch"></i></div>
-                    <h3 class="text-3xl font-bold text-white mb-1">10+</h3>
+                    <h3 class="text-3xl font-bold text-white mb-1">15+</h3>
                     <p class="text-muted text-sm">Technologies maîtrisées</p>
                 </div>
             </div>
@@ -500,62 +353,73 @@
                     Plus qu'un développeur, un <span class="gradient-text">créateur de solutions.</span>
                 </h2>
             </div>
-            <div class="mt-12 grid lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-5" data-aos="fade-right">
+            <div class="mt-12 grid lg:grid-cols-12 gap-10 items-start">
+                <div class="lg:col-span-7" data-aos="fade-right">
+                    <p class="text-lg text-white/90 leading-relaxed mb-4">
+                        Je suis <span class="font-semibold text-primary">ADJI KOMENAN Ivan Florian</span> — alias <span class="font-semibold text-accent">MILANO</span>. Jeune développeur web & mobile et créatif digital basé en Côte d'Ivoire, je me positionne comme un profil polyvalent capable de transformer une idée en <span class="text-white font-medium">solution digitale concrète</span> : site web, application mobile, logiciel, identité visuelle ou contenu digital.
+                    </p>
+                    <p class="text-muted leading-relaxed mb-6">
+                        Mon objectif n'est pas simplement de « coder des sites ». Je veux progressivement concevoir des produits numériques complets, de l'idée jusqu'à la mise en production :
+                        <span class="text-white/80 font-medium">Idée → Analyse → UX/UI → Architecture → Développement → Base de données → API → Tests → Déploiement → Maintenance</span>, avec une forte utilisation de l'IA comme outil d'accélération.
+                    </p>
+                    <div class="glass-card p-6 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary text-white p-3 rounded-full shrink-0">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Ma philosophie</h4>
+                                <p class="text-white/90 text-lg italic leading-relaxed">« Je transforme les idées en expériences numériques. »</p>
+                                <p class="text-muted text-sm mt-2 italic">« Je conçois et développe des solutions numériques pensées pour le monde réel. »</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6">
+                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fas fa-compass text-primary"></i> Ma vision
+                        </h4>
+                        <p class="text-muted text-sm leading-relaxed mb-3">
+                            À moyen et long terme, je veux évoluer de <span class="text-white font-medium">Développeur → Product Builder → Tech Entrepreneur</span>, avec une spécialisation progressive dans le SaaS, les applications web/mobiles, l'IA, l'automatisation et les produits numériques africains.
+                        </p>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Mon objectif : ne pas seulement être celui qui exécute du code, mais celui qui comprend <span class="text-white font-medium">le problème → le produit → la technologie → l'utilisateur → le business.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:col-span-5" data-aos="fade-left">
                     <div class="relative max-w-sm mx-auto lg:mx-0">
                         <div class="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-primary/20 to-accent/10 blur-xl"></div>
                         <div class="relative overflow-hidden rounded-2xl border border-border aspect-[4/5] bg-gradient-to-br from-secondary to-background flex items-center justify-center">
-                            <i class="fas fa-user-graduate text-7xl text-muted/30"></i>
+                            <div class="text-center">
+                                <i class="fas fa-user-astronaut text-7xl text-primary/20"></i>
+                                <p class="mt-4 font-mono text-sm text-muted/50">MILANO</p>
+                            </div>
                             <div class="absolute bottom-3 left-3 rounded-lg border border-border bg-background/80 backdrop-blur-md px-3 py-2">
                                 <p class="font-mono text-xs text-primary">&lt;/&gt; Digital Builder</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="lg:col-span-7" data-aos="fade-left">
-                    <p class="text-lg text-white/90 leading-relaxed mb-4">
-                        Je suis <span class="font-semibold text-primary">ADJI KOMENAN Ivan Florian</span>, étudiant en BTS Informatique — Développeur d'Applications à ISATECH. Passionné par les technologies numériques, je me spécialise dans le développement web et la création d'applications.
-                    </p>
-                    <p class="text-muted leading-relaxed mb-6">
-                        Depuis mon plus jeune âge, j'ai été captivé par l'univers du numérique, et cela m'a conduit à poursuivre une formation approfondie dans ce domaine. Né le 26 mai 2004, j'ai grandi avec un fort intérêt pour l'informatique et la programmation.
-                    </p>
-                    <div class="glass-card p-5 mb-6">
-                        <div class="flex items-center gap-4">
-                            <div class="bg-primary text-white p-3 rounded-full">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white mb-1">Biographie</h4>
-                                <p class="text-muted text-sm">Né le 26 mai 2004, j'ai grandi avec un fort intérêt pour l'informatique et la programmation.</p>
-                            </div>
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-laptop-code text-primary text-2xl mb-2"></i>
+                            <p class="text-white text-sm font-semibold">Développement</p>
+                            <p class="text-muted text-xs">Web · Mobile · SI</p>
                         </div>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="#cv" class="btn-pill-primary"><i class="fas fa-download"></i> Télécharger CV</a>
-                        <a href="#contact" class="btn-pill-secondary"><i class="fas fa-paper-plane"></i> Me contacter</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 glass-card p-8" data-aos="fade-up">
-                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                    <i class="fas fa-route text-primary"></i> Mon Parcours Académique
-                </h3>
-                <div class="space-y-1">
-                    <div class="timeline-item">
-                        <h4 class="font-bold text-white mb-1">BTS Informatique — Développeur d'Applications</h4>
-                        <p class="text-primary text-sm mb-2 font-mono">ISATECH, Abidjan | 2023 - 2025</p>
-                        <p class="text-muted text-sm">Formation approfondie en développement d'applications, bases de données et systèmes d'information.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4 class="font-bold text-white mb-1">Baccalauréat Scientifique</h4>
-                        <p class="text-primary text-sm mb-2 font-mono">Lycée Moderne HKB1, DAOUKRO | 2022 - 2023</p>
-                        <p class="text-muted text-sm">Option Sciences de l'Ingénieur avec mention bien.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4 class="font-bold text-white mb-1">Formation en Technologies Web</h4>
-                        <p class="text-primary text-sm mb-2 font-mono">CEFTEC, Abidjan | 2017 - 2019</p>
-                        <p class="text-muted text-sm">Initiation aux technologies web et à la programmation (HTML, CSS, JavaScript).</p>
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-paint-brush text-accent text-2xl mb-2"></i>
+                            <p class="text-white text-sm font-semibold">Création digitale</p>
+                            <p class="text-muted text-xs">Design · Contenu</p>
+                        </div>
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-robot text-purple-400 text-2xl mb-2"></i>
+                            <p class="text-white text-sm font-semibold">IA & Tech</p>
+                            <p class="text-muted text-xs">Gemini · Agents</p>
+                        </div>
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-bullhorn text-green-400 text-2xl mb-2"></i>
+                            <p class="text-white text-sm font-semibold">Communication</p>
+                            <p class="text-muted text-xs">Digital · Community</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -575,25 +439,20 @@
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
                     Technologies et outils que je <span class="gradient-text">maîtrise</span>
                 </h2>
-                <p class="text-muted max-w-2xl mx-auto">Pour réaliser vos projets avec exigence et qualité</p>
+                <p class="text-muted max-w-2xl mx-auto">Du développement à la création digitale en passant par l'IA</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- Development Skills -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
                 <div class="glass-card p-6" data-aos="fade-right">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="bg-primary text-white p-3 rounded-full">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Développement Frontend</h3>
+                        <div class="bg-primary text-white p-3 rounded-full"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="text-xl font-bold text-white">Développement</h3>
                     </div>
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">HTML</span><span class="text-muted text-sm font-mono">95%</span></div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">HTML5 / CSS3</span><span class="text-muted text-sm font-mono">95%</span></div>
                             <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">CSS</span><span class="text-muted text-sm font-mono">90%</span></div>
-                            <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">JavaScript</span><span class="text-muted text-sm font-mono">85%</span></div>
@@ -603,84 +462,132 @@
                             <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">React</span><span class="text-muted text-sm font-mono">80%</span></div>
                             <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
                         </div>
+                        <div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">PHP / MySQL</span><span class="text-muted text-sm font-mono">85%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Développement Mobile</span><span class="text-muted text-sm font-mono">75%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%"></div></div>
+                        </div>
                     </div>
                 </div>
                 <div class="glass-card p-6" data-aos="fade-left">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="bg-purple-500 text-white p-3 rounded-full">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Développement Backend</h3>
+                        <div class="bg-purple-500 text-white p-3 rounded-full"><i class="fas fa-robot"></i></div>
+                        <h3 class="text-xl font-bold text-white">IA & Nouvelles Technologies</h3>
                     </div>
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">PHP</span><span class="text-muted text-sm font-mono">85%</span></div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Generative AI</span><span class="text-muted text-sm font-mono">85%</span></div>
                             <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Node.js</span><span class="text-muted text-sm font-mono">75%</span></div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Prompt Engineering</span><span class="text-muted text-sm font-mono">80%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Gemini API</span><span class="text-muted text-sm font-mono">75%</span></div>
                             <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Python</span><span class="text-muted text-sm font-mono">70%</span></div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Agents IA</span><span class="text-muted text-sm font-mono">70%</span></div>
                             <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Java</span><span class="text-muted text-sm font-mono">65%</span></div>
-                            <div class="skill-bar"><div class="skill-bar-fill" style="width: 65%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div></div>
+                            <div class="flex justify-between mb-1.5"><span class="text-muted text-sm">Automatisation</span><span class="text-muted text-sm font-mono">75%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4" data-aos="fade-up">
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-html5"></i></div>
-                    <p class="text-white text-sm font-medium">HTML5</p>
+            <!-- Tech Grid -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-white mb-6 text-center" data-aos="fade-up">Stack technique</h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4" data-aos="fade-up">
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fab fa-html5"></i></div>
+                        <p class="text-white text-sm font-medium">HTML5</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fab fa-css3-alt"></i></div>
+                        <p class="text-white text-sm font-medium">CSS3</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fab fa-js"></i></div>
+                        <p class="text-white text-sm font-medium">JavaScript</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fab fa-react"></i></div>
+                        <p class="text-white text-sm font-medium">React</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fab fa-php"></i></div>
+                        <p class="text-white text-sm font-medium">PHP</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fas fa-database"></i></div>
+                        <p class="text-white text-sm font-medium">MySQL</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fab fa-git-alt"></i></div>
+                        <p class="text-white text-sm font-medium">Git & GitHub</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fas fa-mobile-alt"></i></div>
+                        <p class="text-white text-sm font-medium">Mobile Dev</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fas fa-plug"></i></div>
+                        <p class="text-white text-sm font-medium">API / Services</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fas fa-sitemap"></i></div>
+                        <p class="text-white text-sm font-medium">Architecture</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fas fa-code"></i></div>
+                        <p class="text-white text-sm font-medium">VS Code</p>
+                    </div>
+                    <div class="glass-card p-4 text-center hover:border-primary/40 transition">
+                        <div class="text-primary text-4xl mb-2"><i class="fas fa-server"></i></div>
+                        <p class="text-white text-sm font-medium">XAMPP / DBeaver</p>
+                    </div>
                 </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-css3-alt"></i></div>
-                    <p class="text-white text-sm font-medium">CSS3</p>
+            </div>
+
+            <!-- Creative & Digital Skills -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6" data-aos="fade-right">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-accent text-white p-3 rounded-full"><i class="fas fa-palette"></i></div>
+                        <h3 class="text-xl font-bold text-white">Création digitale</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge">UI/UX Design</span>
+                        <span class="tech-badge">Graphic Design</span>
+                        <span class="tech-badge">Design de marque</span>
+                        <span class="tech-badge">Affiches & supports pub</span>
+                        <span class="tech-badge">Création de contenu</span>
+                        <span class="tech-badge">Contenu vidéo</span>
+                        <span class="tech-badge">Community Management</span>
+                        <span class="tech-badge">Communication digitale</span>
+                    </div>
                 </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-js"></i></div>
-                    <p class="text-white text-sm font-medium">JavaScript</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-react"></i></div>
-                    <p class="text-white text-sm font-medium">React</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-php"></i></div>
-                    <p class="text-white text-sm font-medium">PHP</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-laravel"></i></div>
-                    <p class="text-white text-sm font-medium">Laravel</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-node-js"></i></div>
-                    <p class="text-white text-sm font-medium">Node.js</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-python"></i></div>
-                    <p class="text-white text-sm font-medium">Python</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-java"></i></div>
-                    <p class="text-white text-sm font-medium">Java</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fas fa-database"></i></div>
-                    <p class="text-white text-sm font-medium">MySQL</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-git-alt"></i></div>
-                    <p class="text-white text-sm font-medium">Git</p>
-                </div>
-                <div class="glass-card p-4 text-center hover:border-primary/40 transition">
-                    <div class="text-primary text-4xl mb-2"><i class="fab fa-github"></i></div>
-                    <p class="text-white text-sm font-medium">GitHub</p>
+                <div class="glass-card p-6" data-aos="fade-left">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-purple-500 text-white p-3 rounded-full"><i class="fas fa-brain"></i></div>
+                        <h3 class="text-xl font-bold text-white">IA & Outils assistés</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge">Generative AI</span>
+                        <span class="tech-badge">AI-assisted development</span>
+                        <span class="tech-badge">Prompt engineering</span>
+                        <span class="tech-badge">Agents IA</span>
+                        <span class="tech-badge">Gemini API</span>
+                        <span class="tech-badge">Automatisation</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -698,135 +605,329 @@
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
                     Des idées transformées en <span class="gradient-text">solutions</span>
                 </h2>
-                <p class="text-muted max-w-2xl mx-auto">Découvrez une sélection de mes réalisations les plus significatives</p>
+                <p class="text-muted max-w-2xl mx-auto">Un laboratoire de produits numériques — voici mes projets les plus significatifs, présentés en case studies.</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-2 mb-10" data-aos="fade-up">
                 <button class="filter-tab active" data-filter="all">Tous</button>
                 <button class="filter-tab" data-filter="web">Web</button>
                 <button class="filter-tab" data-filter="mobile">Mobile</button>
-                <button class="filter-tab" data-filter="logiciel">Logiciels</button>
-                <button class="filter-tab" data-filter="autre">Autres</button>
+                <button class="filter-tab" data-filter="ia">IA</button>
+                <button class="filter-tab" data-filter="business">Business</button>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
-                <div class="glass-card overflow-hidden group" data-category="web" data-aos="fade-up">
-                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-primary/20 to-secondary">
-                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Site E-commerce" class="w-full h-full object-cover transition group-hover:scale-105 duration-500">
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <span class="tech-badge bg-green-500/15 text-green-400 border-green-500/30">React</span>
-                            <span class="tech-badge">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Site E-commerce</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Plateforme de vente en ligne avec intégration de paiement sécurisé, gestion de stock et optimisation mobile.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-2">
-                                <span class="tech-badge"><i class="fas fa-code-branch text-xs"></i> 15</span>
-                                <span class="tech-badge bg-yellow-500/15 text-yellow-400 border-yellow-500/30"><i class="fas fa-star text-xs"></i> 8</span>
-                            </div>
-                            <a href="#" class="text-primary hover:underline text-sm font-medium">Voir le projet <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-card overflow-hidden group" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                <!-- MILANO AI -->
+                <div class="glass-card overflow-hidden group" data-category="ia" data-aos="fade-up">
                     <div class="relative overflow-hidden h-48 bg-gradient-to-br from-purple-500/20 to-secondary">
-                        <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Application de gestion" class="w-full h-full object-cover transition group-hover:scale-105 duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-robot text-6xl text-purple-400/40"></i>
+                        </div>
                         <div class="absolute top-3 right-3 flex gap-2">
-                            <span class="tech-badge bg-purple-500/15 text-purple-400 border-purple-500/30">Flutter</span>
-                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge bg-purple-500/15 text-purple-400 border-purple-500/30">IA</span>
+                            <span class="tech-badge">Gemini API</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Application de Gestion</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Application mobile Android/iOS pour la gestion de projets avec fonctionnalités de notifications et calendrier intégré.</p>
+                        <h3 class="text-lg font-bold text-white mb-2">MILANO AI</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Agent IA personnel fonctionnant comme une équipe virtuelle de développement : agent principal, agents spécialisés, mémoire, génération de code, analyse, architecture, tests, documentation et automatisation.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex gap-2">
-                                <span class="tech-badge"><i class="fas fa-code-branch text-xs"></i> 12</span>
-                                <span class="tech-badge bg-yellow-500/15 text-yellow-400 border-yellow-500/30"><i class="fas fa-star text-xs"></i> 5</span>
+                                <span class="tech-badge"><i class="fas fa-brain text-xs"></i> Agent</span>
                             </div>
-                            <a href="#" class="text-primary hover:underline text-sm font-medium">Voir le projet <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+                            <a href="#milano-ai" class="text-primary hover:underline text-sm font-medium">Case study <i class="fas fa-arrow-right text-xs ml-1"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="glass-card overflow-hidden group" data-category="web" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-red-500/20 to-secondary">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="CMS personnalisé" class="w-full h-full object-cover transition group-hover:scale-105 duration-500">
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <span class="tech-badge bg-red-500/15 text-red-400 border-red-500/30">Laravel</span>
-                            <span class="tech-badge">MySQL</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">CMS Personnalisé</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Système de gestion de contenu développé sur mesure pour une entreprise de communication.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-2">
-                                <span class="tech-badge"><i class="fas fa-code-branch text-xs"></i> 8</span>
-                                <span class="tech-badge bg-yellow-500/15 text-yellow-400 border-yellow-500/30"><i class="fas fa-star text-xs"></i> 3</span>
-                            </div>
-                            <a href="#" class="text-primary hover:underline text-sm font-medium">Voir le projet <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="text-center mt-10" data-aos="fade-up">
-                <a href="#" class="btn-pill-secondary">
-                    <i class="fas fa-eye"></i> Voir tous mes projets
-                </a>
+                <!-- HotelFlow -->
+                <div class="glass-card overflow-hidden group" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-primary/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-hotel text-6xl text-primary/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-blue-500/15 text-blue-400 border-blue-500/30">Web</span>
+                            <span class="tech-badge">SI Hôtelier</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">HotelFlow</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Solution de gestion destinée aux établissements hôteliers. Née d'un stage réel : numérisation de la gestion des consommations restaurant/snack et leur transmission vers le SI hôtelier.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-hotel text-xs"></i> Hôtellerie</span>
+                            </div>
+                            <a href="#hotelflow" class="text-primary hover:underline text-sm font-medium">Case study <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milaweb -->
+                <div class="glass-card overflow-hidden group" data-category="business" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-green-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-6xl text-green-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-green-500/15 text-green-400 border-green-500/30">Agence</span>
+                            <span class="tech-badge">Digital</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Milaweb</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Mon projet entrepreneurial : agence digitale offrant création de sites web, applications mobiles, solutions digitales, contenu, publicité et conseil en systèmes d'information.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-rocket text-xs"></i> Startup</span>
+                            </div>
+                            <a href="#services" class="text-primary hover:underline text-sm font-medium">Voir services <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodBook -->
+                <div class="glass-card overflow-hidden group" data-category="mobile" data-aos="fade-up">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-book text-6xl text-orange-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-orange-500/15 text-orange-400 border-orange-500/30">App</span>
+                            <span class="tech-badge">Développeurs</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">CodBook</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Application destinée aux développeurs — un outil pensé pour la communauté tech, facilitant l'apprentissage et le partage de connaissances.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-mobile-alt text-xs"></i> Mobile</span>
+                            </div>
+                            <span class="text-muted text-sm">En conception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- e-Garage -->
+                <div class="glass-card overflow-hidden group" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-red-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-wrench text-6xl text-red-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-red-500/15 text-red-400 border-red-500/30">Web</span>
+                            <span class="tech-badge">Gestion</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">e-Garage</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Solution digitale pour la gestion d'un garage — organisation des réparations, suivi des véhicules et facturation.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-wrench text-xs"></i> Automotive</span>
+                            </div>
+                            <span class="text-muted text-sm">En conception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CaisPro -->
+                <div class="glass-card overflow-hidden group" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-cyan-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-cash-register text-6xl text-cyan-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-cyan-500/15 text-cyan-400 border-cyan-500/30">Web</span>
+                            <span class="tech-badge">Pro</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">CaisPro</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Solution de gestion professionnelle — caisse et gestion commerciale pour PME.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-cash-register text-xs"></i> Gestion</span>
+                            </div>
+                            <span class="text-muted text-sm">En conception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Baobab -->
+                <div class="glass-card overflow-hidden group" data-category="business" data-aos="fade-up">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-yellow-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-shopping-bag text-6xl text-yellow-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-yellow-500/15 text-yellow-400 border-yellow-500/30">Marketplace</span>
+                            <span class="tech-badge">Afrique</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">E-Baobab</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Marketplace de produits numériques africains — valoriser et distribuer les créations digitales du continent.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-shopping-bag text-xs"></i> E-commerce</span>
+                            </div>
+                            <span class="text-muted text-sm">En conception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AlertCI -->
+                <div class="glass-card overflow-hidden group" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-pink-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-bell text-6xl text-pink-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-pink-500/15 text-pink-400 border-pink-500/30">Mobile</span>
+                            <span class="tech-badge">Alerte</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">AlertCI</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Concept de solution numérique d'alerte pour la Côte d'Ivoire — information et sécurité en temps réel.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-bell text-xs"></i> Alertes</span>
+                            </div>
+                            <span class="text-muted text-sm">En conception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AgroVision -->
+                <div class="glass-card overflow-hidden group" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-lime-500/20 to-secondary">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-seedling text-6xl text-lime-400/40"></i>
+                        </div>
+                        <div class="absolute top-3 right-3 flex gap-2">
+                            <span class="tech-badge bg-lime-500/15 text-lime-400 border-lime-500/30">Web</span>
+                            <span class="tech-badge">Agriculture</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">AgroVision</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Projet autour du numérique et de l'agriculture — apporter des solutions tech au secteur agricole africain.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="tech-badge"><i class="fas fa-seedling text-xs"></i> AgriTech</span>
+                            </div>
+                            <span class="text-muted text-sm">En conception</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- GitHub Activity Section -->
-    <section class="relative py-24 sm:py-32 border-t border-border">
+    <!-- Case Study: HotelFlow -->
+    <section id="hotelflow" class="relative py-24 sm:py-32 border-t border-border">
         <div class="absolute inset-0 bg-grid bg-grid-fade opacity-20"></div>
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="glass-card p-8" data-aos="fade-up">
-                <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div data-aos="fade-right">
-                        <div class="inline-flex items-center gap-2 mb-4">
-                            <span class="h-px w-8 bg-primary/60"></span>
-                            <span class="section-label">Activité GitHub</span>
-                        </div>
-                        <h2 class="text-2xl font-bold text-white mb-4">Mon Activité GitHub</h2>
-                        <p class="text-muted mb-6">Je partage régulièrement mes projets et contributions sur GitHub. Voici un aperçu de mon activité récente.</p>
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="GitHub Avatar" class="w-12 h-12 rounded-full border-2 border-border">
-                            <div>
-                                <h3 class="font-bold text-white">ADJIKOMENAN</h3>
-                                <p class="text-muted text-sm">Abidjan, Côte d'Ivoire</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 mb-6">
-                            <div><span class="font-bold text-white text-lg">42</span> <span class="text-muted text-sm">Répositories</span></div>
-                            <div><span class="font-bold text-white text-lg">128</span> <span class="text-muted text-sm">Contributions</span></div>
-                            <div><span class="font-bold text-white text-lg">24</span> <span class="text-muted text-sm">Followers</span></div>
-                        </div>
-                        <a href="#" class="btn-pill-secondary text-xs">
-                            <i class="fab fa-github"></i> Voir mon profil GitHub
-                        </a>
+            <div class="inline-flex items-center gap-2 mb-4" data-aos="fade-up">
+                <span class="h-px w-8 bg-primary/60"></span>
+                <span class="section-label">Case Study</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2" data-aos="fade-up">
+                <i class="fas fa-hotel text-primary mr-2"></i>HotelFlow
+            </h2>
+            <p class="text-muted mb-12" data-aos="fade-up">Solution de gestion pour établissements hôteliers — née d'un stage réel chez SONAPIE / Hôtel de la Paix</p>
+
+            <div class="grid lg:grid-cols-3 gap-6 mb-8">
+                <div class="glass-card p-6" data-aos="fade-up">
+                    <div class="text-primary text-2xl mb-3"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3 class="font-bold text-white mb-2">Problème</h3>
+                    <p class="text-muted text-sm leading-relaxed">La gestion encore partiellement papier de certaines consommations du restaurant/snack et leur transmission manuelle vers le système de gestion hôtelier.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-green-400 text-2xl mb-3"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="font-bold text-white mb-2">Solution</h3>
+                    <p class="text-muted text-sm leading-relaxed">Proposition d'une solution numérique pour digitaliser le flux des consommations, automatiser la transmission et améliorer la communication interne.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-purple-400 text-2xl mb-3"><i class="fas fa-tools"></i></div>
+                    <h3 class="font-bold text-white mb-2">Technologies & Méthodes</h3>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="tech-badge">Merise</span>
+                        <span class="tech-badge">Analyse des processus</span>
+                        <span class="tech-badge">Règles de gestion</span>
+                        <span class="tech-badge">Dictionnaire de données</span>
+                        <span class="tech-badge">PHP / MySQL</span>
                     </div>
-                    <div data-aos="fade-left">
-                        <h3 class="text-lg font-bold text-white mb-4">Contributions récentes</h3>
-                        <div class="contributions-grid" id="contrib-grid"></div>
-                        <div class="mt-6 space-y-3">
-                            <div class="flex items-center justify-between p-3 rounded-lg border border-border bg-background/50">
-                                <div>
-                                    <a href="#" class="text-primary hover:underline font-medium text-sm">ecommerce-platform</a>
-                                    <p class="text-muted text-xs">Plateforme e-commerce avec React et Node.js</p>
-                                </div>
-                                <span class="tech-badge">Public</span>
-                            </div>
-                            <div class="flex items-center justify-between p-3 rounded-lg border border-border bg-background/50">
-                                <div>
-                                    <a href="#" class="text-primary hover:underline font-medium text-sm">task-manager-app</a>
-                                    <p class="text-muted text-xs">Application de gestion de tâches en Flutter</p>
-                                </div>
-                                <span class="tech-badge">Public</span>
-                            </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fas fa-tasks text-primary"></i> Travaux réalisés
+                </h3>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Analyse du système existant</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Identification des problèmes</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Analyse des processus</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Modélisation Merise</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Règles de gestion</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Dictionnaire de données</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Proposition d'une solution numérique</p></div>
+                    <div class="flex items-start gap-3"><i class="fas fa-check text-green-400 mt-1"></i><p class="text-muted text-sm">Réflexion sur la communication interne digitale</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study: MILANO AI -->
+    <section id="milano-ai" class="relative py-24 sm:py-32 border-t border-border">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="inline-flex items-center gap-2 mb-4" data-aos="fade-up">
+                <span class="h-px w-8 bg-purple-500/60"></span>
+                <span class="section-label" style="color: #a855f7;">Case Study</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2" data-aos="fade-up">
+                <i class="fas fa-robot text-purple-400 mr-2"></i>MILANO AI
+            </h2>
+            <p class="text-muted mb-12" data-aos="fade-up">Un assistant IA personnel capable de fonctionner comme une équipe virtuelle de développement</p>
+
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-white/90 leading-relaxed mb-4">
+                        <span class="font-semibold text-purple-400">MILANO AI</span> est mon concept d'assistant IA personnel basé sur l'API Gemini. Il ne s'agit pas d'un simple chatbot, mais d'un véritable système d'agents capables de collaborer comme une équipe de développement.
+                    </p>
+                    <p class="text-muted leading-relaxed mb-6">
+                        L'objectif : utiliser l'IA comme un véritable outil d'accélération du développement — de l'idée à la production, en passant par l'architecture, les tests et la documentation.
+                    </p>
+                    <div class="glass-card p-5">
+                        <p class="text-white/90 italic">« Une équipe virtuelle de développement, propulsée par l'IA. »</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-lg font-bold text-white mb-6">Architecture envisagée</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 rounded-lg border border-border bg-background/50">
+                            <i class="fas fa-user-tie text-purple-400 text-xl w-6 text-center"></i>
+                            <div><p class="text-white text-sm font-semibold">Agent principal</p><p class="text-muted text-xs">Coordonne l'ensemble du système</p></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg border border-border bg-background/50">
+                            <i class="fas fa-users text-purple-400 text-xl w-6 text-center"></i>
+                            <div><p class="text-white text-sm font-semibold">Agents spécialisés</p><p class="text-muted text-xs">Code, analyse, architecture, tests, doc</p></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg border border-border bg-background/50">
+                            <i class="fas fa-brain text-purple-400 text-xl w-6 text-center"></i>
+                            <div><p class="text-white text-sm font-semibold">Mémoire</p><p class="text-muted text-xs">Contexte persistant entre les sessions</p></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg border border-border bg-background/50">
+                            <i class="fas fa-code text-purple-400 text-xl w-6 text-center"></i>
+                            <div><p class="text-white text-sm font-semibold">Génération de code & Architecture</p><p class="text-muted text-xs">Du concept à la structure logicielle</p></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg border border-border bg-background/50">
+                            <i class="fas fa-cogs text-purple-400 text-xl w-6 text-center"></i>
+                            <div><p class="text-white text-sm font-semibold">Automatisation</p><p class="text-muted text-xs">Tests, documentation, déploiement</p></div>
                         </div>
                     </div>
                 </div>
@@ -834,36 +935,144 @@
         </div>
     </section>
 
-    <!-- CV Download Section -->
-    <section id="cv" class="relative py-24 sm:py-32 border-t border-border">
+    <!-- Experience & Education Section -->
+    <section id="experience" class="relative py-24 sm:py-32 border-t border-border">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="glass-card p-8 sm:p-12 text-center" data-aos="zoom-in">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <div class="inline-flex items-center gap-2 mb-4">
                     <span class="h-px w-8 bg-primary/60"></span>
-                    <span class="section-label">CV</span>
+                    <span class="section-label">Parcours</span>
                     <span class="h-px w-8 bg-primary/60"></span>
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Télécharger mon CV</h2>
-                <p class="text-muted mb-8 max-w-2xl mx-auto">Vous pouvez télécharger une version PDF de mon curriculum vitae pour en savoir plus sur mon parcours, mes compétences et mes expériences professionnelles.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                    <a href="#" class="btn-pill-primary glow-primary"><i class="fas fa-download"></i> Télécharger CV (FR)</a>
-                    <a href="#" class="btn-pill-secondary"><i class="fas fa-download"></i> Download CV (EN)</a>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                    Expérience & <span class="gradient-text">Formation</span>
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Experience -->
+                <div data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-briefcase text-primary"></i> Expérience professionnelle
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-white mb-1">Stagiaire Consultant Système d'Information</h4>
+                            <p class="text-primary text-sm mb-2 font-mono">SONAPIE / Hôtel de la Paix — Projet ORCHESTRA HÔTEL</p>
+                            <p class="text-muted text-sm mb-3">Analyse et amélioration du système d'information hôtelier. Numérisation de la gestion des consommations restaurant/snack et de leur transmission vers le SI hôtelier.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Merise</span>
+                                <span class="tech-badge">Analyse SI</span>
+                                <span class="tech-badge">Processus</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-white mb-1">Créatif Digital — CIMIF Imprimerie</h4>
+                            <p class="text-primary text-sm mb-2 font-mono">Communication visuelle & Impression</p>
+                            <p class="text-muted text-sm mb-3">Conception graphique, impression et gestion de demandes clients. Activités autour de la communication visuelle, de la création graphique et de la gestion de contenus.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Graphic Design</span>
+                                <span class="tech-badge">Impression</span>
+                                <span class="tech-badge">Communication</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-white mb-1">Expérience créative multi-secteur</h4>
+                            <p class="text-primary text-sm mb-2 font-mono">Impression · Communication · Commerce · Digital</p>
+                            <p class="text-muted text-sm">Travail dans plusieurs environnements liés à l'impression, la communication visuelle, la création graphique, la gestion de contenus, le commerce et la communication digitale.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="flex items-center gap-3 p-4 rounded-lg border border-border bg-background/50">
-                        <i class="fas fa-file-pdf text-primary text-2xl"></i>
-                        <div class="text-left">
-                            <p class="text-white font-medium text-sm">CV_ADJIKOMENAN.pdf</p>
-                            <p class="text-muted text-xs">2.4 MB</p>
+
+                <!-- Education -->
+                <div data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-primary"></i> Formation
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-white mb-1">BTS Informatique — Développeur d'Applications</h4>
+                            <p class="text-primary text-sm mb-2 font-mono">IDA, Côte d'Ivoire</p>
+                            <p class="text-muted text-sm mb-3">Formation orientée vers le développement informatique, le développement web, les bases de données, l'analyse et conception, les systèmes d'information, la programmation et la maintenance informatique.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Développement</span>
+                                <span class="tech-badge">Bases de données</span>
+                                <span class="tech-badge">Analyse & Conception</span>
+                                <span class="tech-badge">SI</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-white mb-1">Problématiques SI dans le secteur hôtelier</h4>
+                            <p class="text-primary text-sm mb-2 font-mono">Travail appliqué — Hôtel de la Paix</p>
+                            <p class="text-muted text-sm">Étude concrète des systèmes d'information hôteliers : analyse, modélisation et proposition de solutions numériques.</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-lg border border-border bg-background/50">
-                        <i class="fas fa-file-pdf text-primary text-2xl"></i>
-                        <div class="text-left">
-                            <p class="text-white font-medium text-sm">CV_ADJIKOMENAN_EN.pdf</p>
-                            <p class="text-muted text-xs">2.3 MB</p>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="relative py-24 sm:py-32 border-t border-border">
+        <div class="absolute inset-0 bg-grid bg-grid-fade opacity-20"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <span class="h-px w-8 bg-primary/60"></span>
+                    <span class="section-label">Services — Milaweb</span>
+                    <span class="h-px w-8 bg-primary/60"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                    Ce que je <span class="gradient-text">propose</span>
+                </h2>
+                <p class="text-muted max-w-2xl mx-auto">Construire des solutions numériques modernes, accessibles et adaptées aux besoins des entreprises africaines.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6" data-aos="fade-up">
+                    <div class="bg-primary/15 text-primary p-3 rounded-xl inline-flex mb-4"><i class="fas fa-globe text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Création de sites web</h3>
+                    <p class="text-muted text-sm">Sites vitrines, e-commerce et applications web modernes et responsive.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary/15 text-primary p-3 rounded-xl inline-flex mb-4"><i class="fas fa-mobile-screen text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Applications mobiles</h3>
+                    <p class="text-muted text-sm">Applications iOS et Android sur mesure pour vos besoins métier.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary/15 text-primary p-3 rounded-xl inline-flex mb-4"><i class="fas fa-lightbulb text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Solutions digitales</h3>
+                    <p class="text-muted text-sm">De l'idée au produit : analyse, conception et développement complet.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up">
+                    <div class="bg-accent/15 text-accent p-3 rounded-xl inline-flex mb-4"><i class="fas fa-palette text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Création de contenu</h3>
+                    <p class="text-muted text-sm">Contenus visuels, vidéos et supports de communication digitale.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-accent/15 text-accent p-3 rounded-xl inline-flex mb-4"><i class="fas fa-bullhorn text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Publicité digitale</h3>
+                    <p class="text-muted text-sm">Stratégies de communication visuelle et publicité en ligne.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-accent/15 text-accent p-3 rounded-xl inline-flex mb-4"><i class="fas fa-users text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Community Management</h3>
+                    <p class="text-muted text-sm">Gestion de communautés et animation des réseaux sociaux.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up">
+                    <div class="bg-purple-500/15 text-purple-400 p-3 rounded-xl inline-flex mb-4"><i class="fas fa-server text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Conseil en SI</h3>
+                    <p class="text-muted text-sm">Conseil en systèmes d'information : analyse, modélisation et optimisation.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-purple-500/15 text-purple-400 p-3 rounded-xl inline-flex mb-4"><i class="fas fa-paint-brush text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">Communication visuelle</h3>
+                    <p class="text-muted text-sm">Identité visuelle, design de marque, affiches et supports publicitaires.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-purple-500/15 text-purple-400 p-3 rounded-xl inline-flex mb-4"><i class="fas fa-robot text-xl"></i></div>
+                    <h3 class="font-bold text-white mb-2">IA & Automatisation</h3>
+                    <p class="text-muted text-sm">Intégration d'IA, agents et automatisation de processus.</p>
                 </div>
             </div>
         </div>
@@ -882,41 +1091,43 @@
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
                     Contactez-<span class="gradient-text">moi</span>
                 </h2>
-                <p class="text-muted max-w-2xl mx-auto">Disponible pour des opportunités de freelance ou CDI. N'hésitez pas à me contacter pour discuter de votre projet.</p>
+                <p class="text-muted max-w-2xl mx-auto">Disponible pour des opportunités de collaboration, freelance ou projets. Discutons de votre idée.</p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8">
                 <div data-aos="fade-right">
                     <h3 class="text-xl font-bold text-white mb-6">Informations de contact</h3>
                     <div class="space-y-4">
-                        <div class="glass-card p-5 flex items-center gap-4">
+                        <a href="mailto:adjikomenan@gmail.com" class="glass-card p-5 flex items-center gap-4 hover:border-primary/40 transition block">
                             <div class="bg-primary text-white p-3 rounded-full"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <h4 class="font-bold text-white">Email</h4>
-                                <p class="text-primary text-sm">adjikomenan@email.com</p>
+                                <p class="text-primary text-sm">adjikomenan@gmail.com</p>
                             </div>
-                        </div>
-                        <div class="glass-card p-5 flex items-center gap-4">
+                        </a>
+                        <a href="tel:+2250554186619" class="glass-card p-5 flex items-center gap-4 hover:border-primary/40 transition block">
                             <div class="bg-green-500 text-white p-3 rounded-full"><i class="fas fa-phone-alt"></i></div>
                             <div>
                                 <h4 class="font-bold text-white">Téléphone</h4>
-                                <p class="text-primary text-sm">+225 XX XX XX XX</p>
+                                <p class="text-primary text-sm">+225 05 54 18 66 19</p>
+                                <p class="text-muted text-xs">+225 07 00 24 57 98</p>
                             </div>
-                        </div>
+                        </a>
                         <div class="glass-card p-5 flex items-center gap-4">
                             <div class="bg-yellow-500 text-white p-3 rounded-full"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <h4 class="font-bold text-white">Localisation</h4>
-                                <p class="text-muted text-sm">Abidjan, Côte d'Ivoire</p>
+                                <p class="text-muted text-sm">Abidjan, Côte d'Ivoire 🇨🇮</p>
                             </div>
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-white mt-8 mb-4">Réseaux sociaux</h3>
                     <div class="flex gap-3">
+                        <a href="mailto:adjikomenan@gmail.com" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+2250554186619" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fas fa-phone"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fab fa-whatsapp"></i></a>
                         <a href="#" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fab fa-github"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-full border border-border bg-secondary/50 flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
@@ -938,15 +1149,16 @@
                                 <label class="block text-muted text-sm font-medium mb-2">Sujet *</label>
                                 <select class="form-input" required>
                                     <option value="" disabled selected>Sélectionnez un sujet</option>
-                                    <option>Proposition d'emploi</option>
-                                    <option>Projet freelance</option>
-                                    <option>Demande d'information</option>
+                                    <option>Projet web / mobile</option>
+                                    <option>Design & Communication</option>
+                                    <option>Conseil en SI</option>
+                                    <option>Projet IA / Automatisation</option>
                                     <option>Autre</option>
                                 </select>
                             </div>
                             <div class="mb-6">
                                 <label class="block text-muted text-sm font-medium mb-2">Message *</label>
-                                <textarea rows="5" class="form-input resize-none" placeholder="Votre message..." required></textarea>
+                                <textarea rows="5" class="form-input resize-none" placeholder="Décrivez votre projet..." required></textarea>
                             </div>
                             <button type="submit" class="btn-pill-primary w-full justify-center glow-primary">
                                 Envoyer le message <i class="fas fa-paper-plane"></i>
@@ -965,15 +1177,10 @@
                 <div>
                     <div class="flex items-center gap-2 mb-4">
                         <i class="fas fa-code text-xl text-primary"></i>
-                        <span class="font-bold text-lg text-white">ADJI<span class="text-primary">KOMENAN</span></span>
+                        <span class="font-bold text-lg text-white">MILANO<span class="text-primary">.</span>dev</span>
                     </div>
-                    <p class="text-muted text-sm mb-4">Développeur d'Applications basé à Abidjan, spécialisé dans le développement web et mobile.</p>
-                    <div class="flex gap-3">
-                        <a href="#" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition text-sm"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition text-sm"><i class="fab fa-github"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition text-sm"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted hover:text-primary hover:border-primary/40 transition text-sm"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+                    <p class="text-muted text-sm mb-4">ADJI KOMENAN Ivan Florian — Web & Mobile Developer, Digital Creator et Graphic Designer basé à Abidjan.</p>
+                    <p class="text-muted text-sm italic">« Je transforme les idées en expériences numériques. »</p>
                 </div>
                 <div>
                     <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Navigation</h3>
@@ -982,29 +1189,32 @@
                         <li><a href="#apropos" class="text-muted hover:text-primary transition">À Propos</a></li>
                         <li><a href="#competences" class="text-muted hover:text-primary transition">Compétences</a></li>
                         <li><a href="#projets" class="text-muted hover:text-primary transition">Projets</a></li>
-                        <li><a href="#contact" class="text-muted hover:text-primary transition">Contact</a></li>
+                        <li><a href="#experience" class="text-muted hover:text-primary transition">Parcours</a></li>
+                        <li><a href="#services" class="text-muted hover:text-primary transition">Services</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-muted hover:text-primary transition">Développement Web</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary transition">Applications Mobiles</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary transition">Systèmes d'Information</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary transition">Design & UI</a></li>
+                        <li><a href="#services" class="text-muted hover:text-primary transition">Sites web</a></li>
+                        <li><a href="#services" class="text-muted hover:text-primary transition">Applications mobiles</a></li>
+                        <li><a href="#services" class="text-muted hover:text-primary transition">Communication visuelle</a></li>
+                        <li><a href="#services" class="text-muted hover:text-primary transition">Community Management</a></li>
+                        <li><a href="#services" class="text-muted hover:text-primary transition">Conseil en SI</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h3>
                     <ul class="space-y-2 text-sm">
-                        <li class="text-muted"><i class="fas fa-envelope text-primary text-xs mr-2"></i> adjikomenan@email.com</li>
-                        <li class="text-muted"><i class="fas fa-phone text-primary text-xs mr-2"></i> +225 XX XX XX XX</li>
-                        <li class="text-muted"><i class="fas fa-map-marker-alt text-primary text-xs mr-2"></i> Abidjan, Côte d'Ivoire</li>
+                        <li><a href="mailto:adjikomenan@gmail.com" class="text-muted hover:text-primary transition"><i class="fas fa-envelope text-primary text-xs mr-2"></i> adjikomenan@gmail.com</a></li>
+                        <li><a href="tel:+2250554186619" class="text-muted hover:text-primary transition"><i class="fas fa-phone text-primary text-xs mr-2"></i> +225 05 54 18 66 19</a></li>
+                        <li><a href="tel:+2250700245798" class="text-muted hover:text-primary transition"><i class="fas fa-phone text-primary text-xs mr-2"></i> +225 07 00 24 57 98</a></li>
+                        <li class="text-muted"><i class="fas fa-map-marker-alt text-primary text-xs mr-2"></i> Abidjan, Côte d'Ivoire 🇨🇮</li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-border pt-6 text-center">
-                <p class="text-muted text-sm">© 2025 ADJI KOMENAN Ivan Florian. Tous droits réservés.</p>
+                <p class="text-muted text-sm">© 2025 ADJI KOMENAN Ivan Florian — MILANO. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -1013,6 +1223,7 @@
     <script>
         AOS.init({ duration: 700, once: true, offset: 80 });
 
+        // Loader
         (function() {
             let progress = 0;
             const fill = document.getElementById('progress-fill');
@@ -1023,23 +1234,22 @@
                 if (progress >= 100) {
                     progress = 100;
                     clearInterval(interval);
-                    setTimeout(() => {
-                        loader.classList.add('hidden');
-                        setTimeout(() => loader.style.display = 'none', 600);
-                    }, 300);
+                    setTimeout(() => { loader.classList.add('hidden'); }, 400);
                 }
                 fill.style.width = progress + '%';
                 text.textContent = Math.floor(progress) + '%';
-            }, 100);
+            }, 120);
         })();
 
+        // Scroll progress bar
+        const scrollProgress = document.getElementById('scroll-progress');
         window.addEventListener('scroll', () => {
             const scrolled = window.scrollY;
-            const max = document.body.scrollHeight - window.innerHeight;
-            const pct = max > 0 ? scrolled / max : 0;
-            document.getElementById('scroll-progress').style.transform = 'scaleX(' + pct + ')';
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.transform = `scaleX(${scrolled / max})`;
         });
 
+        // Project filters
         document.querySelectorAll('.filter-tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
@@ -1055,17 +1265,12 @@
             });
         });
 
-        (function() {
-            const grid = document.getElementById('contrib-grid');
-            if (!grid) return;
-            const levels = [0,0,0,1,1,2,0,0,1,2,3,0,1,1,2,3,4,0,0,1,2,2,3,0,1,0,0,2,3,1,0,1,2,3,4,0,1,1,2,0,0,1,2,3,0,1,0,2,1,3,0,0,1];
-            levels.forEach(lvl => {
-                const cell = document.createElement('div');
-                cell.className = 'contribution-cell';
-                cell.dataset.level = lvl;
-                grid.appendChild(cell);
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
-        })();
+        });
     </script>
 </body>
 </html>
